@@ -168,21 +168,19 @@ An example `devcontainer.json` can be found below.
 {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-     "ghcr.io/my-org/private-features/hello:1": {
+     "ghcr.io/my-org/private-features/preset:latest": {
             "greeting": "Hello"
         }
     },
-    "customizations": {
-        "codespaces": {
-            "repositories": {
-                "my-org/private-features": {
-                    "permissions": {
-                        "packages": "read",
-                        "contents": "read"
-                    }
-                }
-            }
-        }
+    "mounts": [
+        {
+          "source": "/run/host-services/ssh-auth.sock",
+          "target": "/run/host-services/ssh-auth.sock",
+          "type": "bind"
+        },
+    ],
+    "containerEnv": {
+		"SSH_AUTH_SOCK": "/run/host-services/ssh-auth.sock"
     }
 }
 ```

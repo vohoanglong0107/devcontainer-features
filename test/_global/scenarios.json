@@ -1,13 +1,12 @@
 {
-    "neovim_and_hello": {
+    "neovim_and_preset": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
             "neovim": {
                 "sha": "master"
             },
-            "hello": {
-                "greeting": "Greetings"
-            }
-        }
+            "preset": {}
+        },
+        "remoteUser": "root"
     }
 }

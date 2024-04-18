@@ -3,7 +3,7 @@
 # The 'test/_global' folder is a special test folder that is not tied to a single feature.
 #
 # This test file is executed against a running container constructed
-# from the value of 'neovim_and_hello' in the tests/_global/scenarios.json file.
+# from the value of 'neovim_and_preset' in the tests/_global/scenarios.json file.
 #
 # The value of a scenarios element is any properties available in the 'devcontainer.json'.
 # Scenarios are useful for testing specific options in a feature, or to test a combination of features.
@@ -18,14 +18,11 @@ source dev-container-features-test-lib
 
 echo -e "The result of the 'neovim' command will be:\n"
 nvim --version
-echo -e "The result of the 'hello' command will be:\n"
-hello
 echo -e "\n"
 
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib.
 check "check neovim" bash -c "nvim --version"
-check "check I am greeting with 'Greetings'" bash -c "hello | grep 'Greetings, $(whoami)'"
 
 
 # Report result
