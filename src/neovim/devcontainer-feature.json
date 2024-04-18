@@ -1,0 +1,24 @@
+{
+    "name": "Install Neovim",
+    "id": "neovim",
+    "version": "0.0.1",
+    "description": "Installs Neovim and sets it as the default editor.",
+    "options": {
+        "sha": {
+            "type": "string",
+            "default": "master",
+            "description": "The SHA of the Neovim release to install. Defaults to 'master'."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ],
+    "containerEnv": {
+        "EDITOR": "nvim",
+        "VISUAL": "nvim"
+    },
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/git:1": {}
+    }
+    
+}

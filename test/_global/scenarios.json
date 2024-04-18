@@ -1,9 +1,9 @@
 {
-    "color_and_hello": {
+    "neovim_and_hello": {
         "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
         "features": {
-            "color": {
-                "favorite": "purple"
+            "neovim": {
+                "sha": "master"
             },
             "hello": {
                 "greeting": "Greetings"
