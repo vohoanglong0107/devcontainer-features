@@ -1,24 +1,20 @@
 
-# Hello, World! (hello)
+# Preset (preset)
 
-A hello world feature
+Preset for development environment
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/vohoanglong0107/devcontainer-features/hello:1": {}
+    "ghcr.io/vohoanglong0107/devcontainer-features/preset:0": {}
 }
 ```
 
-## Options
 
-| Options Id | Description | Type | Default Value |
-|-----|-----|-----|-----|
-| greeting | Select a pre-made greeting, or enter your own | string | hey |
 
 
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/vohoanglong0107/devcontainer-features/blob/main/src/hello/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/vohoanglong0107/devcontainer-features/blob/main/src/preset/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
