@@ -1,0 +1,36 @@
+{
+    "name": "Preset",
+    "id": "preset",
+    "version": "0.0.1",
+    "description": "Preset for development environment",
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/nix:1": {
+            "useAttributePath": true,
+            "packages": "nixpkgs.bat,nixpkgs.chezmoi,nixpkgs.difftastic,nixpkgs.fd,nixpkgs.fzf,nixpkgs.ripgrep,nixpkgs.lazygit"
+        },
+        "ghcr.io/devcontainers/features/node:1": {},
+        "ghcr.io/vohoanglong0107/devcontainer-features/neovim:0.0.1": {},
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": false,
+            "installOhMyZshConfig": false
+        }
+    },
+    "containerEnv": {
+        // https://stackoverflow.com/a/33499558
+        "TERM": "xterm-256color",
+        "HISTFILE": "/commandhistory/.zsh_history",
+        // used for Neovim clipboard OSC52
+        // see `:h g:clipboard` in Neovim
+        "SSH_TTY": "/dev/tty"
+    },
+    "mounts": [
+        {
+            "source": "${devcontainerId}-zsh-history",
+            "target": "/commandhistory",
+            "type": "volume"
+        }
+    ],
+    "postCreateCommand": "chezmoi update --force"
+}
