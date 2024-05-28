@@ -42,6 +42,7 @@ source dev-container-features-test-lib
 # check <LABEL> <cmd> [args...]
 check "execute nvim" bash -c "nvim --version"
 check "execute chezmoi apply successfully" bash -c "chezmoi cat ~/.zshrc"
+check "execute github cli successfully" bash -c "gh"
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
