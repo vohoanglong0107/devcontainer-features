@@ -6,7 +6,7 @@
     "dependsOn": {
         "ghcr.io/devcontainers/features/nix:1": {
             "useAttributePath": true,
-            "packages": "nixpkgs.bat,nixpkgs.chezmoi,nixpkgs.difftastic,nixpkgs.fd,nixpkgs.fzf,nixpkgs.ripgrep,nixpkgs.lazygit"
+            "packages": "nixpkgs.bat,nixpkgs.chezmoi,nixpkgs.difftastic,nixpkgs.fd,nixpkgs.fzf,nixpkgs.gh,nixpkgs.ripgrep,nixpkgs.lazygit"
         },
         "ghcr.io/devcontainers/features/node:1": {},
         "ghcr.io/vohoanglong0107/devcontainer-features/neovim:0.0.1": {},
