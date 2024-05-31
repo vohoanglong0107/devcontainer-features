@@ -1,7 +1,7 @@
 {
     "name": "Preset",
     "id": "preset",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Preset for development environment",
     "dependsOn": {
         "ghcr.io/devcontainers/features/nix:1": {
